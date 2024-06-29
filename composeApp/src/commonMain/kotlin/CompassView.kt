@@ -35,7 +35,7 @@ fun CompassView(
     qiblaDirection:Double,
 ) {
 
-    val qiblaAzimuth = (qiblaDirection - azimuth + 360) % 360
+
 
     Scaffold(
 
@@ -62,7 +62,7 @@ fun CompassView(
                     tint = MaterialTheme.colors.primary,
                     modifier = Modifier
                         .size(300.dp)
-                        .rotate(-(qiblaAzimuth.toFloat()))
+                        .rotate(((qiblaDirection - azimuth)).toFloat())
                 )
             }
         }
